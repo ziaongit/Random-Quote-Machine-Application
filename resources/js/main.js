@@ -1,21 +1,31 @@
-$(document).ready(function() { 
-
 var randomQuote;
-
-// Get Quotes
-$.getJSON("https://talaikis.com/api/quotes/", function(data) {
-    updateQuote(data);
-});
-
-// Generate random Quote start
-function updateQuote(quotes) {
-    
-    var QuotesIndex = Math.floor(Math.random() * quotes.length);
-    randomQuote = quotes[QuotesIndex];
-    
-    console.log(randomQuote);
-}
-// Generate random Quote end
-
+var currentIndex;
+$(document).ready(function() { 
+    getRandomQuote();
+    $('#randomQuote').click(getRandomQuote);
   
 });
+
+
+// Get Random Quote start
+function getRandomQuote(){
+    $.getJSON("https://talaikis.com/api/quotes/", function(data) {
+    generateQuote(data);
+    
+    });
+}
+// Get Random Quote end
+
+// Generate random Quote start
+function generateQuote(quotes) {
+    do {
+        var QuotesIndex = Math.floor(Math.random() * quotes.length);
+    }while(currentIndex === QuotesIndex)
+    
+    randomQuote = quotes[QuotesIndex];
+    currentIndex = QuotesIndex;
+    
+    $('#quote').html(randomQuote.quote);
+    $('#author').html(randomQuote.author);
+}
+// Generate random Quote end
