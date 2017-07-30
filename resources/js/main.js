@@ -11,7 +11,6 @@ $(document).ready(function() {
 function getRandomQuote(){
     $.getJSON("https://talaikis.com/api/quotes/", function(data) {
     generateQuote(data);
-    
     });
 }
 // Get Random Quote end

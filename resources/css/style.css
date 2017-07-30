@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200italic);
+body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+.text-center {
+    text-align: center;
+}
+.quote-card {
+    background: #fff;
+    color: #222222;
+    padding: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(34, 34, 34, 0.12);
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+}
+.quote-card p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 80%;
+}
+.quote-card cite {
+    font-size: 16px;
+    margin-top: 10px;
+    display: block;
+    font-weight: 200;
+    opacity: 0.8;
+}
+.quote-card:before {
+    font-family: Georgia, serif;
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 5em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+}
+.quote-card:after {
+    font-family: Georgia, serif;
+    content: "”";
+    position: absolute;
+    bottom: -110px;
+    line-height: 100px;
+    right: -32px;
+    font-size: 25em;
+    color: rgba(238, 238, 238, 0.8);
+    font-weight: normal;
+}
+@media (max-width: 640px) {
+    .quote-card:after {
+        font-size: 22em;
+        right: -25px;
+    }
+}
+.quote-card.blue-card {
+    background: #0078FF;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(34, 34, 34, 0.12), 0 2px 4px rgba(34, 34, 34, 0.24);
+}
+.quote-card.blue-card:before, .quote-card.blue-card:after {
+    color: #5FAAFF;
+}
+.quote-card.green-card {
+    background: #00970B;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(34, 34, 34, 0.12), 0 2px 4px rgba(34, 34, 34, 0.24);
+}
+.quote-card.green-card:before, .quote-card.green-card:after {
+    color:#59E063 ;
+}
+
+.quote-card.red-card {
+    background: #F61E32;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(34, 34, 34, 0.12), 0 2px 4px rgba(34, 34, 34, 0.24);
+}
+.quote-card.red-card:before, .quote-card.red-card:after {
+    color:#F65665 ;
+}
+
+.quote-card.yellow-card {
+    background: #F9A825;
+    color: #222222;
+    box-shadow: 0 1px 2px rgba(34, 34, 34, 0.12), 0 2px 4px rgba(34, 34, 34, 0.24);
+}
+.quote-card.yellow-card:before, .quote-card.yellow-card:after {
+    color: #FBC02D;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 12px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5e5e5e;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #d1dade;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-image: none !important;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.12s linear 0s !important;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.btn-cons {
+    margin-right: 5px;
+    min-width: 120px;
+    margin-bottom: 8px;
+}
+.btn-success {
+    font-family: Georgia, serif;
+    color: #fff;
+    background-color: #00970b;
+    border-color: #59e063;
+}
+.btn-link, .btn-link:active, .btn-link[disabled], fieldset[disabled] .btn-link {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+    border-color: transparent;
+}
+.btn-link {
+    color: #5e5e5e;
+    background-color: transparent;
+    border: none;
+}
