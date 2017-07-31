@@ -8,7 +8,8 @@ $(document).ready(function() {
     $('#twitter').click(shareTweet);
     
     function getRandomQuote(){
-        $.getJSON("https://talaikis.com/api/quotes/", function(data) {
+        // user can you this api https://talaikis.com/api/quotes/
+        $.getJSON("resources/js/api.js", function(data) {
         generateQuote(data);
         });
     }
