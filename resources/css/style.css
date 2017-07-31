@@ -56,7 +56,12 @@ h1{
     font-size: 190%;
     margin-top: 10px;
     display: block;
-    font-weight: 200;
+    max-width: 80%;
+}
+#author {
+    float: right;
+    z-index: 300;
+    position: relative;
 }
 .quote-card:before {
     font-family: Georgia, serif;
@@ -89,6 +94,9 @@ h1{
     }
     .quote-card cite {
         font-size: 100%;
+    }
+    #author {
+    text-shadow: -2px 2px #ff2881;
     }
     #twitter {
     width: 100%;

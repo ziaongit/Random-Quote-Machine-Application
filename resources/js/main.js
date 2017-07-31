@@ -24,12 +24,14 @@ $(document).ready(function() {
         currentIndex = QuotesIndex;
         
         $('#quote').html(randomQuote.quote);
-        $('#author').html(randomQuote.author);
+        $('#author').html('- '+randomQuote.author);
 
         
     }
     function shareTweet() {
-
+        if(quoteText.length > 100) {
+            quoteText = quoteText.substr(0, 100).match(/(^.+)\s/)[1]+ '...';
+        }
         window.open('https://twitter.com/intent/tweet?text='+quoteText+' - '+quoteAuthor);
     }
   
